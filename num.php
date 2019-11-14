@@ -19,22 +19,21 @@ include "base.php";
 
 // 7-8月份中獎號碼
 $theYear="2019年";
-$theTerm="7-8月";
-$special="45698621";
-$grand="45698621";
-$first1="96182420";
-$first2="47464012";
-$first3="62781818";
-$sixth1="928";
-$sixth2="899";
-
+$theTerm="1-2月";
+$special="12121212";
+$crown="13131313";
+$grand1="14141414";
+$grand2="15151515";
+$grand3="16161616";
+$extra1="110";
+$extra2="543";
 
 
 ?>
 
 <h2>中獎號碼 </h2>
 
-<form action="prizeAPI.php">
+<form action="rsAPI.php">
 
 
 <table>
@@ -63,7 +62,7 @@ $sixth2="899";
 <!-- ____2___________________________________________ -->   
 <tr>
     <td rowspan="2">特獎</td>
-    <td colspan="2"><?=$grand;?></td>
+    <td colspan="2"><?=$crown;?></td>
     <td rowspan="2">200萬元</td>   
 </tr>
 
@@ -73,16 +72,16 @@ $sixth2="899";
 <!-- ___3____________________________________________ -->   
 <tr>
     <td rowspan="4">頭獎</td>
-    <td colspan="2"><?=$first1;?>0</td>
+    <td colspan="2"><?=$grand1;?>0</td>
     <td rowspan="4">20萬元</td>   
 </tr>
 
 <tr>
-    <td colspan="2"><?=$first2;?></td>
+    <td colspan="2"><?=$grand2;?></td>
 </tr>
 
 <tr>
-    <td colspan="2"><?=$first3;?></td>
+    <td colspan="2"><?=$grand3;?></td>
 </tr>
 
 <tr>
@@ -118,12 +117,12 @@ $sixth2="899";
 <!-- ___增開6獎____________________________________________ -->  
 <tr>
     <td rowspan="3">增開六獎</td>
-    <td colspan="2"><?=$sixth1;?></td>
+    <td colspan="2"><?=$extra1;?></td>
     <td rowspan="3">2百元</td>   
 </tr>
 
 <tr>
-    <td colspan="2"><?=$sixth2;?></td>
+    <td colspan="2"><?=$extra2;?></td>
 </tr>
 
 <tr>
@@ -133,6 +132,7 @@ $sixth2="899";
 </table>
 </form>
 <br>
+<a href="index.php">回首頁</a>
 <br>
 <br>
 <br>

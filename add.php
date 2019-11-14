@@ -14,25 +14,25 @@
     <table>
     <tr>
         <td>年分</td>
-        <td colspan="3"> <input type="year" name="year" ></td>       
+        <td colspan="3"> <input type="text" name="year" ></td>       
     </tr>
     <tr>
         <td>期別</td>
         <td colspan="3">
         <select name="term" id="">
-                <option value="0102">01-02期</option>
-                <option value="0304">03-04期</option>
-                <option value="0506">05-06期</option>
-                <option value="0708">07-08期</option>
-                <option value="0910">09-10期</option>
-                <option value="1112">11-12期</option>
+                <option value="01-02">01-02期</option>
+                <option value="03-04">03-04期</option>
+                <option value="05-06">05-06期</option>
+                <option value="07-08">07-08期</option>
+                <option value="09-10">09-10期</option>
+                <option value="11-12">11-12期</option>
         </select>       
     </td>        
     </tr>
     <tr>
         <td>發票號碼</td>
         <td><input type="text" name="track" ></td>
-        <td colspan="2"><input type="number" name="number"></td>>    
+        <td colspan="2"><input type="text" name="number"></td>>    
     </tr>
     <tr>
         <td>發票金額</td>

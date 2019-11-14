@@ -8,10 +8,6 @@
     text-decoration: none;
 }    
 
-.homepage{
-    border: none;
-    border-collapse: collapse;
-}
 table{
     border: 3px solid lightseagreen;
     border-collapse: collapse;
@@ -21,17 +17,14 @@ td{
     height: 1.5em;
     padding: 5px;
 }
-.subtitle{
-    font-size: 1.2em;
-}
+
 a{
     border: 1px dashed lightseagreen;
-    padding:5px;
+    padding:2px;
     width:50px;
-    height:30px;
+    margin: 5px auto;
     border-radius:5px;
     text-align: center;
-    line-height:1.5em;
-    font-size:1em;
+
 }    
 

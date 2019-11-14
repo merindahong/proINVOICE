@@ -28,7 +28,7 @@ $theYear="2019年";
 <form action="prizeAPI.php" method="post">
 <table>
 <tr>
-    <td colspan="2"><?=$theYear;?></td>
+    <td colspan="2"><input type="text" name="year" ></td>
     <td colspan="2">期別：
         <select name="term" id="">
         <option value="0102">01-02期</option>
@@ -49,7 +49,7 @@ $theYear="2019年";
 <!-- ____1___________________________________________ -->   
 <tr>
     <td rowspan="2">特別獎</td>
-    <td colspan="2"><input type="number"></td>
+    <td colspan="2"><input type="text" name="special" ></td>
     <td rowspan="2">1000萬元</td>   
 </tr>
 
@@ -60,7 +60,7 @@ $theYear="2019年";
 <!-- ____2___________________________________________ -->   
 <tr>
     <td rowspan="2">特獎</td>
-    <td colspan="2"><input type="number"></td>
+    <td colspan="2"><input type="text" name="crown" ></td>
     <td rowspan="2">200萬元</td>   
 </tr>
 
@@ -70,16 +70,16 @@ $theYear="2019年";
 <!-- ___3____________________________________________ -->   
 <tr>
     <td rowspan="4">頭獎</td>
-    <td colspan="2"><input type="number"></td>
+    <td colspan="2"><input type="text" name="grand1" ></td>
     <td rowspan="4">20萬元</td>   
 </tr>
 
 <tr>
-    <td colspan="2"><input type="number"></td>
+    <td colspan="2"><input type="text" name="grand2" ></td>
 </tr>
 
 <tr>
-    <td colspan="2"><input type="number"></td>
+    <td colspan="2"><input type="text" name="grand3" ></td>
 </tr>
 
 <tr>
@@ -115,12 +115,12 @@ $theYear="2019年";
 <!-- ___增開6獎____________________________________________ -->  
 <tr>
     <td rowspan="3">增開六獎</td>
-    <td colspan="2"><input type="number"></td>
+    <td colspan="2"><input type="text" name="extra1" ></td>
     <td rowspan="3">2百元</td>   
 </tr>
 
 <tr>
-    <td colspan="2"><input type="number"></td>
+    <td colspan="2"><input type="text" name="extra2" ></td>
 </tr>
 
 <tr>
