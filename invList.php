@@ -13,7 +13,9 @@ include "base.php";
     <link rel="stylesheet" href="style.css">
 </head>
 <body> 
-    <h2>發票清單</h2>
+    <h1>發票清單</h1>
+    <a href="invAdd.php">繼續輸入</a>
+    <a href="index.php">回首頁</a>
 <table>
     <tr>
         <td>年份</td>

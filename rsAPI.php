@@ -14,7 +14,13 @@ include "base.php";
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body> 
+<body>
+    
+<br><br>
+<h1>This Page is NG. Sorry.</h1>
+<br>
+<a href="index.php"> 回首頁</a>
+<br>
 
 
  
@@ -104,7 +110,7 @@ include "base.php";
 
 
 
-<a href="index.php">回首頁</a>
+
 <br>
 <br>
 <br>
