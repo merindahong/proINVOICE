@@ -1,3 +1,6 @@
+
+
+<!-- to check function -->
 <?php
 include "kMatch.php";
 $n=12345678;
