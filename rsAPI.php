@@ -25,7 +25,6 @@ include "base.php";
 
     $term="01-02";
     $sp1="12121212";
-    $sp1=$_POST['special'];
     $cr1="13131313";
 
     $ga1="14141414";
@@ -55,16 +54,16 @@ include "base.php";
 
 
 
-   $special="恭喜你中了一千萬";
-   $crown="恭喜你中了二百萬";
-   $grand1="恭喜你中了二十萬";
-   $grand2="恭喜你中了四萬";
-   $grand3="恭喜你中了一萬";
-   $grand4="恭喜你中了四千";
-   $grand5="恭喜你中了一千";
-   $grand6="恭喜你中了二百";
-   $extra1="恭喜你中了二百";
-   $extra2="恭喜你中了二百";
+   $special="恭喜你中了一千萬，發票明細如下：";
+   $crown="恭喜你中了二百萬，發票明細如下：";
+   $grand1="恭喜你中了二十萬，發票明細如下：";
+   $grand2="恭喜你中了四萬，發票明細如下：";
+   $grand3="恭喜你中了一萬，發票明細如下：";
+   $grand4="恭喜你中了四千，發票明細如下：";
+   $grand5="恭喜你中了一千，發票明細如下：";
+   $grand6="恭喜你中了二百，發票明細如下：";
+   $extra1="恭喜你中了二百，發票明細如下：";
+   $extra2="恭喜你中了二百，發票明細如下：";
    
   
     
@@ -80,63 +79,28 @@ include "base.php";
         <td>發票金額</td>        
  
 <?php    
- $sql="SELECT * FROM `invtb` WHERE `number` Like('$sp1') && `term` IN('$term')";
- $data=$pdo->query($sql->fetchAll();
 
-      foreach($data as $v) {  
-        // print_r($v);
+    $sql2="SELECT * FROM `invtb` WHERE `number` Like('$sp1') && `term` IN('$term') ";
+    // echo $sql;
+      $data2=$pdo->query($sql2)->fetchAll();
+        // print_r($data); 
         echo $special;
-?>          
-        <tr>
-                    <td><?=$v['year'];?></td>
-                    <td><?=$v['term'];?></td>
-                    <td><?=$v['track'];?></td>
-                    <td><?=$v['number'];?></td>
-                    <td><?=$v['amount'];?></td>
-                  
-       </tr>
-<?php                  
-                }
-
-//_________crown_______________________________________________________________________________ -->    
-?>
-    </table>  
-
-
-
-
-<table>
-    <tr>
-        <td>年份</td>
-        <td>期別</td>
-        <td>字軌</td>
-        <td>號碼</td>
-        <td>發票金額</td>        
- 
-<?php    
- $sql1="SELECT * FROM `invtb` WHERE `number` Like('$cr1') && `term` IN('$term')  ";
- $data1=$pdo->query($sql->fetchAll();
-      foreach($data as $v) {  
-          echo "$crown";
+    foreach($data2 as $v2) {  
+        // echo "<br><br>";
         // print_r($v);
-?>          
+    ?>          
         <tr>
-                    <td><?=$v['year'];?></td>
-                    <td><?=$v['term'];?></td>
-                    <td><?=$v['track'];?></td>
-                    <td><?=$v['number'];?></td>
-                    <td><?=$v['amount'];?></td>
-                  
+                    <td><?=$v2['year'];?></td>
+                    <td><?=$v2['term'];?></td>
+                    <td><?=$v2['track'];?></td>
+                    <td><?=$v2['number'];?></td>
+                    <td><?=$v2['amount'];?></td>
        </tr>
-<?php                  
+      <?php                  
                 }
-
-//_________Special_______________________________________________________________________________ -->    
-?>
-    </table>  
-
-
-
+ //_________Special_______________________________________________________________________________ -->    
+    ?>
+    </table> 
 
 
 

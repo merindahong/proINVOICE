@@ -18,8 +18,4 @@ if(!empty($data)){
         echo "上傳有誤"; 
         header("location:add.php");  
 }
-//NG:有空格，還是去了sucess page 了!!!! MySQL留白
-//NG:Number輸入PQR，還是去了sucess page 了!!!! MySQL出現0
-//NG:Number輸入超過8碼，還是去了sucess page 了!!!! MySQL全接受
 
-?>
