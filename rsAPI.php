@@ -14,12 +14,19 @@ include "base.php";
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body> 
+<body>
+    
+<br><br>
+<h1>This Page is NG. Sorry.</h1>
+<br>
+<a href="index.php"> 回首頁</a>
+<br><br>
 
 
  
 <?php
 // _________Special_______________________________________________________________________________
+
 
 
 
@@ -67,7 +74,7 @@ include "base.php";
    
   
     
- //_________Special_______________________________________________________________________________ -->
+ //_________方法一_______________________________________________________________________________ -->
  ?>
 
 <table>
@@ -78,13 +85,16 @@ include "base.php";
         <td>號碼</td>
         <td>發票金額</td>        
  
-<?php    
+<?php
 
+    // $sql2="SELECT * FROM `invtb` WHERE `number` Like('$sp1') && `term` IN('$_POST["term"]') ";
     $sql2="SELECT * FROM `invtb` WHERE `number` Like('$sp1') && `term` IN('$term') ";
     // echo $sql;
       $data2=$pdo->query($sql2)->fetchAll();
-        // print_r($data); 
+        // print_r($data); 這裡ok
         echo $special;
+        echo "<br><br>";
+
     foreach($data2 as $v2) {  
         // echo "<br><br>";
         // print_r($v);
@@ -98,13 +108,41 @@ include "base.php";
        </tr>
       <?php                  
                 }
- //_________Special_______________________________________________________________________________ -->    
+ //_________方法二_______________________________________________________________________________ -->    
     ?>
     </table> 
+    <hr>    
+<?php   
+if(isset($_POST['confirm'])) {          
+
+    $month = $_POST['month'];
+    echo "恭喜！" .$month ."期，我又中獎了，每天都中一千萬，都沒有別的進度，有夢最美。";
+    $sql2="SELECT * FROM `invtb` WHERE `number` Like('$sp1') && `term` IN('$month') ";
+    echo $sql2;
+    $data2=$pdo->query($sql2)->fetchAll();
+    // print_r($data2); 
+    echo $special;
+    echo "<br><br>";     
+    
+if(!$sql2) {
+   echo "DB有誤"; 
+} else{
+
+foreach ($data2 as $value) ?>          
+<tr>
+            <td><?=$value['year'];?></td>
+            <td><?=$value['term'];?></td>
+            <td><?=$value['track'];?></td>
+            <td><?=$value['number'];?></td>
+            <td><?=$value['amount'];?></td>
+</tr>
+<?php                  
+        }
+}
+?>
+<hr>
 
 
-
-<a href="index.php">回首頁</a>
 <br>
 <br>
 <br>

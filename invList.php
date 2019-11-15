@@ -13,7 +13,9 @@ include "base.php";
     <link rel="stylesheet" href="style.css">
 </head>
 <body> 
-    <h2>發票清單</h2>
+    <h1>發票清單</h1>
+    <a href="invAdd.php">繼續輸入</a>
+    <a href="index.php">回首頁</a>
 <table>
     <tr>
         <td>年份</td>
@@ -25,7 +27,8 @@ include "base.php";
 
 <?php
   
-$sql="SELECT * FROM invtb";
+$sql="SELECT * FROM invtb ORDER BY `id` DESC";
+//新增資料放上方
 $rs= $pdo->query($sql)->fetchAll();
 
 foreach ($rs as $value) {
@@ -43,7 +46,7 @@ foreach ($rs as $value) {
 ?>
 </table> 
 
-<a href="add.php">繼續輸入</a>
+<a href="invAdd.php">繼續輸入</a>
 <a href="index.php">回首頁</a>
 </body>
 </html>

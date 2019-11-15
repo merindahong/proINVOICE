@@ -1,6 +1,5 @@
 *{
     font-family: Arial, Helvetica, sans-serif, "微軟正黑體";
-    font-size:1em;
     padding:0;
     margin:0;
     list-style-type: none;
@@ -8,7 +7,8 @@
     text-decoration: none;
 }    
 
-table{
+
+.table{
     border: 3px solid lightseagreen;
     border-collapse: collapse;
 }
@@ -16,14 +16,20 @@ td{
     border: 1px solid lightseagreen;
     height: 1.5em;
     padding: 5px;
+    border-collapse: collapse;
 }
 
-a{
-    border: 1px dashed lightseagreen;
+a {
+    border: 1px solid lightseagreen;
+    background-color: lightpink;
     padding:2px;
     width:50px;
     border-radius:5px;
     text-align: center;
 
 }    
+h1{
+    font-size: 2em;
+    color: navy;
+}
 

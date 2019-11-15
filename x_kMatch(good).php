@@ -1,4 +1,7 @@
 <?php
+
+
+// good funciton to keep
 function kMatch($w,$n){
     
     $win=$w ;
