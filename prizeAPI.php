@@ -20,10 +20,13 @@ print_r($data);
 
 if(!empty($data)){
     echo "輸入成功";
-    header("location:sucessNumber.html");   
+    header("location:prizeList.php");   
     }else{
         echo "上傳有誤"; 
-        header("location:prizeNumber.php");  
+        header("location:prizeAdd.php");  
 }
+
+// ___________________________________________
+
 
 ?>

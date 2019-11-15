@@ -43,7 +43,7 @@ foreach ($rs as $value) {
 ?>
 </table> 
 
-<a href="add.php">繼續輸入</a>
+<a href="invAdd.php">繼續輸入</a>
 <a href="index.php">回首頁</a>
 </body>
 </html>

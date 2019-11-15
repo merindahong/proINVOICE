@@ -1,11 +1,6 @@
-
 <?php
-$dsn="mysql:host=localhost; charset=utf8; dbname=invoice";
-$pdo=new PDO($dsn, "root", "");
-
-// MySQL要連線才可執行，否則這裡會出現error。
+include "base.php";
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,40 +8,45 @@ $pdo=new PDO($dsn, "root", "");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>中獎號碼表</title>
 </head>
 <body>
-
+    <h1>輸入成功</h1>
+    <a href="index.php">回首頁</a>
 
 <?php
+  
+$sql="SELECT * FROM prize WHERE term='0102'";
+$prize= $pdo->query($sql)->fetchAll();
 
-
-$sql="SELECT * FROM prize WHERE `term`='0102'";
-$data= $pdo->query($sql)->fetchAll();
-print_r($data);
-
-echo "<br><br><br>";
-
-$term="01-02";
-$sp1="12121212";
-$special="恭喜你中了一千萬";
-$sql="SELECT * FROM `invtb` WHERE `number` Like('$sp1') && `term` IN('$term')  ";
-$data=$pdo->query($sql)->fetchAll();
-print_r($data);
-
-echo "<br><br><br>";
-
-$cr1="13131314";
-$crown="恭喜你中了二百萬";
-$sql="SELECT * FROM `invtb` WHERE `number` Like('$cr1') && `term` IN('$term')  ";
-$data=$pdo->query($sql)->fetchAll();
-print_r($data);
-
-
-
-
-
-?>
+foreach ($prize as $value) {
+ 
+    $yy=$value['year'];
+    $tt=$value['term'];
+    $ss=$value['special'];
+    $cc=$value['crown'];
+    $g1=$value['grand1'];
+    $g2=$value['grand2'];
+    $g3=$value['grand3'];
+    $e1=$value['extra1'];
+    $e2=$value['extra2']; 
+}
     
-</body>
-</html>
+
+    ?>
+
+
+    <h2>中獎號碼 </h2>
+   
+
+
+    <table>
+    <tr>
+        <td colspan="2"><?=$yy;?></td>
+        <td colspan="2">期別： <?=$tt;?></td>
+    </tr>
+    <!-- _______________________________________________ -->
+
+        
+    </body>
+    </html>
